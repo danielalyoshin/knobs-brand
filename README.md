@@ -14,14 +14,14 @@ A git submodule of [knobs-site](https://github.com/danielalyoshin/knobs-site) an
 
 [Brand guide](BRAND.md) · [Tokens](tokens/tokens.json) · [knobs](https://github.com/danielalyoshin/knobs) · [getknobs.app](https://getknobs.app/) · [Issues](https://github.com/danielalyoshin/knobs/issues)
 
-<sub>An independent project. Not affiliated with or endorsed by the OBS Project.</sub>
+<sub>knobs is an independent project. It isn’t affiliated with or endorsed by the OBS Project.</sub>
 
 </div>
 
 ## Tokens
 
-Every value lives in [`tokens/tokens.json`](tokens/tokens.json). `node tokens/build.mjs` builds `dist/` from it: `tokens.css` for the site, `knobs_tokens.h` for the app, `tokens.flat.json` for anything else, and the app's state marks as SVGs in `status/`, and `--check` confirms `dist/` still matches. It needs Node 18 or newer and nothing else.
+Every value lives in [`tokens/tokens.json`](tokens/tokens.json). `node tokens/build.mjs` builds `dist/` from it: `tokens.css` for the site, `knobs_tokens.h` for the app, `tokens.flat.json` for anything else, and the app’s state marks as SVGs in `status/`, and `--check` confirms `dist/` still matches. It needs Node 18 or newer and nothing else.
 
-## License
+## Licence
 
-[GPL-2.0-or-later](LICENSE), the same as knobs, except two kinds of files: the fonts in `fonts/` (Radio Canada and Source Code Pro, under the SIL Open Font License) and the logo files in `logo/` and `web/` (all rights reserved, apart from the knobs repository's [TRADEMARKS.md](https://github.com/danielalyoshin/knobs/blob/main/TRADEMARKS.md); see [logo/LICENSE](logo/LICENSE) and [web/LICENSE](web/LICENSE)).
+[GPL-2.0-or-later](LICENSE), the same as knobs, except two kinds of files: the fonts in `fonts/` (Radio Canada and Source Code Pro, under the SIL Open Font License) and the logo files in `logo/` and `web/` (all rights reserved, apart from the knobs repository’s [TRADEMARKS.md](https://github.com/danielalyoshin/knobs/blob/main/TRADEMARKS.md); see [logo/LICENSE](logo/LICENSE) and [web/LICENSE](web/LICENSE)).

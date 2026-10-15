@@ -13,7 +13,7 @@ The rest of the brand follows the logo. Corners are square, and round things are
 ## Logo
 
 - **Horizontal lockup:** the default, everywhere there is room for it.
-- **Stacked lockup:** only where the space is close to square.
+- **Stacked lockup:** only where the space is close to square, or taller than it is wide.
 - **Mark alone:** app and tray icons, favicons, and any place the lockup would be under 24px tall.
 - **Versions:** "light" (light ink, for dark grounds), "dark" (dark ink, for light grounds), and one-colour "white" and "black".
 - Always use the files. Never retype the wordmark or redraw the mark.
@@ -40,6 +40,7 @@ Drawn on a 100-unit square, centred at 50, 50.
 ### Clear space and minimum size
 
 - Keep a quarter of the mark's height clear on every side of any lockup or of the mark. Nothing else enters it, including the edge of the screen or page.
+- Icons give way: the favicon and the Windows app's and tray's icons fill their square, as Windows' own icons do.
 - Lockup: at least 24px tall on screen, 8mm in print. The site's header uses it at 32px tall (140px wide).
 - Mark: at least 16px, 5mm.
 
@@ -62,7 +63,7 @@ Drawn on a 100-unit square, centred at 50, 50.
 
 - The light mark on a graphite tile, at 3.2× on a 512 tile. The mark is centred by eye, not by its box: the point 47.6, 46 on the 100-unit grid sits at the tile's centre, about halfway between centring the knob and centring the whole mark.
 - The rounded tile (radius 112 on 512) is the app icon. The square tile is for iOS, which rounds it itself.
-- The favicon is the mark alone, filling its square: one SVG holding both marks, the dark one on light browser tabs and the light one on dark tabs, switching with the system's light or dark setting. At favicon size the quarter-height clear space gives way; it's the one place it does.
+- The favicon is the mark alone, filling its square: one SVG holding both marks, the dark one on light browser tabs and the light one on dark tabs, switching with the system's light or dark setting.
 - `favicon.ico` (16, 32 and 48) and the favicon PNGs keep the tile, at 64 units (radius 14) with the mark at 52%, for browsers that can't switch an SVG favicon: one picture that reads on any tab.
 - The iPhone icon keeps its square tile, since iOS fills transparency with black.
 - The Windows app's icon is the mark alone, with no tile. A plain `.exe` icon is one picture for light and dark taskbars alike, and the `.exe`'s, which Explorer, Start and the installer show, is the dark mark: the graphite dial with the red sweep, for the light grounds those mostly are. Where the app picks its icon itself, in its windows and its notifications, a dark ground gets the light mark, the white dial.
@@ -319,10 +320,12 @@ knobs speaks the way its README does.
 - **No hype.** No exclamation marks, no superlatives, no urgency and no jokes. Nothing a careful reader could take for a download trap.
 - **"knobs" is always lowercase**, even at the start of a sentence or a heading. Its possessive is "knobs's".
 - **No em dashes.** Use a full stop, a comma, a colon or parentheses.
+- **British spelling:** colour, licence (the noun), centre, behaviour, grey. Words in -ize keep it (minimize, recognize), as Windows spells them. Names keep their own spelling: the GNU General Public License, `LICENSE` files, code and token names, and OBS's and Windows' words.
 - **Things by their own names.** OBS's words for what is in OBS (Filters, Audio Mixer, Mic/Aux), Windows' words for what is in Windows. A name the reader will look for in another window is set in bold, or in SemiBold in the app.
 - **Generic about other apps.** "Your other apps", never a list of products.
-- **Typographic quotes and apostrophes** (’ “ ”) in anything a reader sees.
+- **Typographic quotes and apostrophes** (’ “ ”) in anything a reader sees: the app, the site, the README and release notes. Code, and docs for contributors such as this one, keep straight quotes.
 - **The words we use:** mic, filter chain, virtual cable (or cable), OBS profile, scene collection, monitoring device; release, installer, portable zip, checksum.
+- **Tagline:** "Your OBS mic chain, in every app." It heads getknobs.app, the READMEs and the app's About box, and opens the GitHub repository's description.
 - **Independence.** Wherever knobs is presented, say: "knobs is an independent project. It isn't affiliated with or endorsed by the OBS Project."
 
 ## Licence

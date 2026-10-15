@@ -9,19 +9,19 @@
 
 **Your OBS mic chain, in every app.**
 
-The brand of [knobs](https://github.com/danielalyoshin/knobs): its logo, colours, type, and the design tokens that carry them.<br>
-A git submodule of [knobs-site](https://github.com/danielalyoshin/knobs-site) and [knobs](https://github.com/danielalyoshin/knobs), so the page and the app draw on the same files.
+The brand of [knobs](https://github.com/danielalyoshin/knobs): its logo, colours, type and design tokens.<br>
+A git submodule of [knobs](https://github.com/danielalyoshin/knobs) and [knobs-site](https://github.com/danielalyoshin/knobs-site), so the app and its download page draw on the same files.
 
-[Brand guide](BRAND.md) · [Tokens](tokens/tokens.json) · [knobs](https://github.com/danielalyoshin/knobs) · [getknobs.app](https://getknobs.app/) · [Issues](https://github.com/danielalyoshin/knobs/issues)
+[![Licence: GPL-2.0-or-later](https://img.shields.io/badge/licence-GPL--2.0--or--later-5c6169?labelColor=191b1d)](LICENSE)
+
+[Brand guide](BRAND.md) · [knobs](https://github.com/danielalyoshin/knobs) · [getknobs.app](https://getknobs.app/) · [Issues](https://github.com/danielalyoshin/knobs/issues)
 
 <sub>knobs is an independent project. It isn’t affiliated with or endorsed by the OBS Project.</sub>
 
 </div>
 
-## Tokens
-
-Every value lives in [`tokens/tokens.json`](tokens/tokens.json). `node tokens/build.mjs` builds `dist/` from it: `tokens.css` for the site, `knobs_tokens.h` for the app, `tokens.flat.json` for anything else, and the app’s state marks as SVGs in `status/`, and `--check` confirms `dist/` still matches. It needs Node 18 or newer and nothing else.
+<br>
 
 ## Licence
 
-[GPL-2.0-or-later](LICENSE), the same as knobs, except two kinds of files: the fonts in `fonts/` (Radio Canada and Source Code Pro, under the SIL Open Font License) and the logo files in `logo/` and `web/` (all rights reserved, apart from the knobs repository’s [TRADEMARKS.md](https://github.com/danielalyoshin/knobs/blob/main/TRADEMARKS.md); see [logo/LICENSE](logo/LICENSE) and [web/LICENSE](web/LICENSE)).
+[GPL-2.0-or-later](LICENSE), the same as knobs, apart from the fonts in `fonts/` (SIL Open Font License) and the logo files in `logo/` and `web/` (all rights reserved, apart from the knobs repository’s [TRADEMARKS.md](https://github.com/danielalyoshin/knobs/blob/main/TRADEMARKS.md)).

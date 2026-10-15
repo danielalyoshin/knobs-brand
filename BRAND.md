@@ -2,7 +2,7 @@
 
 How knobs presents itself: the logo, colour, type, shapes, motion, icons and words. These rules hold wherever knobs appears: the app, getknobs.app, the README, release notes, videos, and anything else that shows knobs to someone.
 
-Everything they govern is in this repository. The logo is in `logo/` and `web/`, the fonts are in `fonts/`, and every value below is in `tokens/tokens.json`, with copies for CSS and C++ in `dist/`. If a value here and `tokens.json` ever disagree, `tokens.json` is right.
+Everything these rules cover is in this repository. The logo is in `logo/` and `web/`, the fonts are in `fonts/`, and every value below is in `tokens/tokens.json`, with copies for CSS and C++ in `dist/`. If a value here and `tokens.json` ever disagree, `tokens.json` is right.
 
 ## The idea
 
@@ -24,7 +24,7 @@ Drawn on a 100-unit square, centred at 50, 50.
 
 - **Knob:** a disc of radius 34.5, in the ink.
 - **Pointer:** a V-cut pointing to 1:30 (45° up and right), 17 units wide at the rim, its tip 2 units from the centre.
-- **Sweep:** starts at 7:30, the knob's lowest position, and runs clockwise to the pointer. It grows evenly from 3.5 units wide to 9. Both ends are cut square, and the last continues the pointer's leading edge.
+- **Sweep:** starts at 7:30, the knob's lowest position, and runs clockwise to the pointer. It grows evenly from 3.5 units wide to 9. Both ends are cut square, and the end at the pointer continues the pointer's leading edge.
 - **Gap:** 4.5 units between the knob and the sweep. The sweep's outer edge reaches radius 48.
 - **Colour:** the knob in the ink, the sweep in cap red, the same red as "obs".
 
@@ -40,7 +40,7 @@ Drawn on a 100-unit square, centred at 50, 50.
 ### Clear space and minimum size
 
 - Keep a quarter of the mark's height clear on every side of any lockup or of the mark. Nothing else enters it, including the edge of the screen or page.
-- Icons give way: the favicon and the Windows app's and tray's icons fill their square, as Windows' own icons do.
+- Icons are the exception: the favicon and the Windows app's and tray's icons fill their square, as Windows' own icons do.
 - Lockup: at least 24px tall on screen, 8mm in print. The site's header uses it at 32px tall (140px wide).
 - Mark: at least 16px, 5mm.
 
@@ -66,7 +66,7 @@ Drawn on a 100-unit square, centred at 50, 50.
 - The favicon is the mark alone, filling its square: one SVG holding both marks, the dark one on light browser tabs and the light one on dark tabs, switching with the system's light or dark setting.
 - `favicon.ico` (16, 32 and 48) and the favicon PNGs keep the tile, at 64 units (radius 14) with the mark at 52%, for browsers that can't switch an SVG favicon: one picture that reads on any tab.
 - The iPhone icon keeps its square tile, since iOS fills transparency with black.
-- The Windows app's icon is the mark alone, with no tile. A plain `.exe` icon is one picture for light and dark taskbars alike, and the `.exe`'s, which Explorer, Start and the installer show, is the dark mark: the graphite dial with the red sweep, for the light grounds those mostly are. Where the app picks its icon itself, in its windows and its notifications, a dark ground gets the light mark, the white dial.
+- The Windows app's icon is the mark alone, with no tile. A plain `.exe` icon is one picture for light and dark taskbars alike. The `.exe`'s icon, which Explorer, Start and the installer show, is the dark mark (the graphite knob with the red sweep), since those mostly show it on light grounds. Where the app picks its own icon, in its windows and notifications, a dark ground gets the light mark instead.
 - The tray uses the one-colour mark with no tile, as Windows' own tray icons are: white on a dark taskbar and black on a light one, switching when Windows' mode does.
 - At 16 and 20px the tray's mark is the knob alone, filling its square. There the gap and the sweep's start are under a pixel, and anti-aliasing smears them into grey. From 24px the sweep is back. The knob-alone files are the one-colour `knobs-knob-white.svg` and `knobs-knob-black.svg`, on the mark's 100-unit grid.
 
@@ -84,7 +84,7 @@ Every SVG is outlined and needs no fonts. The files carry no metadata: the SVGs 
 
 ## Colour
 
-Graphite leads, and red means knobs. A near-neutral graphite carries the brand in two schemes: graphite grounds in the dark scheme, a cool pale grey desk with white panels in the light one. One red, cap red, marks everything that is knobs and everything that can be pressed. Cap red deep, the red of the light scheme's buttons, is also the band the page closes on, in both schemes.
+Graphite leads, and red means knobs. A near-neutral graphite carries the brand in two schemes: graphite grounds in the dark scheme, a cool pale grey desk with white panels in the light one. One red, cap red, marks everything that is knobs and everything that can be pressed. Cap red deep, the red of the light scheme's buttons, is also the band getknobs.app ends on, in both schemes.
 
 The palette is derived in OKLCH. Every neutral sits on graphite's hue (260), and every red on cap red's (21 to 27).
 
@@ -188,7 +188,7 @@ In CSS each role is a custom property of the same name (`--ground`), and a role 
 
 ### Charts
 
-When knobs is measured against OBS, knobs's bars are cap red, lit, and OBS's are an unlit grey. In the dark scheme the two differ in lightness as well as hue (1.7:1); in the light scheme they sit close in lightness (1.1:1). So knobs comes first, every bar is labelled with its value, and knobs's values are set in bold: colour never carries the meaning alone. In forced colours, knobs's bars take the text colour and OBS's the disabled-text colour.
+When knobs is measured against OBS, knobs's bars are cap red, lit, and OBS's are an unlit grey. In the dark scheme the two differ in lightness as well as hue (1.7:1); in the light scheme they sit close in lightness (1.1:1). So knobs comes first, every bar is labelled with its value, and knobs's values are set in SemiBold: colour never carries the meaning alone. In forced colours, knobs's bars take the text colour and OBS's the disabled-text colour.
 
 ### Contrast
 

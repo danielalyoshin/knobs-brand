@@ -346,15 +346,15 @@ knobs app: you can redistribute it and/or modify it under the terms of
 the GNU General Public License above, as published by the Free Software
 Foundation, either version 2 of the License, or (at your option) any
 later version. That covers the design tokens, the script that builds
-them, the files it generates, and the documentation.
+them, the files it generates and the documentation.
 
-Not covered by this license:
+Not covered by this licence:
 
-- logo/ and web/: the knobs logo files (the mark, the wordmark, the
-  lockups and the app icon, as SVG masters and PNG rasters) and the
-  favicons, touch icon, app icons and share card made from them.
-  They aren't under the GPL; see logo/LICENSE, web/LICENSE and the
-  knobs repository's TRADEMARKS.md.
+- logo/ and web/: the knobs logo files (the mark, the knob alone, the
+  wordmark, the lockups and the app icon, as SVG masters and PNG
+  rasters) and the favicons, touch icon, app icons and share card made
+  from them. They aren't under the GPL; see logo/LICENSE, web/LICENSE
+  and the knobs repository's TRADEMARKS.md.
 - fonts/: the Radio Canada and Source Code Pro fonts. They stay under
   the SIL Open Font License 1.1, in fonts/OFL-Radio-Canada.txt and
   fonts/OFL-Source-Code-Pro.txt.

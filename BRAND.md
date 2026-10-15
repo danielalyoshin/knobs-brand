@@ -326,7 +326,7 @@ knobs speaks the way its README does.
 - **Typographic quotes and apostrophes** (’ “ ”) in anything a reader sees: the app, the site, the README and release notes. Code, and docs for contributors such as this one, keep straight quotes.
 - **The words we use:** mic, filter chain, virtual cable (or cable), OBS profile, scene collection, monitoring device; release, installer, portable zip, checksum.
 - **Tagline:** "Your OBS mic chain, in every app." It heads getknobs.app, the READMEs and the app's About box, and opens the GitHub repository's description.
-- **Independence.** Wherever knobs is presented, say: "knobs is an independent project. It isn't affiliated with or endorsed by the OBS Project."
+- **Independence.** Wherever knobs is presented, say: "knobs is an independent project. It isn't affiliated with the OBS Project."
 
 ## Licence
 

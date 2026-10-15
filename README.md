@@ -16,7 +16,7 @@ A git submodule of [knobs](https://github.com/danielalyoshin/knobs) and [knobs-s
 
 [Brand guide](BRAND.md) · [knobs](https://github.com/danielalyoshin/knobs) · [getknobs.app](https://getknobs.app/) · [Issues](https://github.com/danielalyoshin/knobs/issues)
 
-<sub>knobs is an independent project. It isn’t affiliated with or endorsed by the OBS Project.</sub>
+<sub>knobs is an independent project. It isn’t affiliated with the OBS Project.</sub>
 
 </div>
 

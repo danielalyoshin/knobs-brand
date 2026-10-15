@@ -265,7 +265,7 @@ inline constexpr float kFocusOffset = 2.0f;
 inline constexpr float kDot = 9.0f;
 }  // namespace geometry
 
-// Motion: one curve and two durations.
+// Motion: one curve, its durations, and distances in DIPs.
 namespace motion {
 // The one curve: quick to start, then settling. Things settle; nothing
 // performs.
@@ -279,6 +279,11 @@ inline constexpr float kFastMs = 160.0f;
 // Structure: a state settling, a panel changing height, a marker moving to a
 // new place.
 inline constexpr float kSlowMs = 320.0f;
+// A waiting mark's breath: it fades out and back once in this time, for as long
+// as something waits.
+inline constexpr float kBreathMs = 1600.0f;
+// How far arriving content rises as it fades in, over the fast duration.
+inline constexpr float kRise = 4.0f;
 }  // namespace motion
 
 }  // namespace knobs::tokens

@@ -79,9 +79,11 @@
   --dot:          9px;
 
   /* Motion */
-  --ease:          cubic-bezier(0.2, 0, 0, 1);
-  --duration-fast: 160ms;
-  --duration-slow: 320ms;
+  --ease:            cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast:   160ms;
+  --duration-slow:   320ms;
+  --duration-breath: 1600ms;
+  --rise:            4px;
 
   /* Colour by role: dark */
   --ground:           #191b1d; /* --brand-graphite */

@@ -421,7 +421,7 @@ function buildCpp() {
     ...select('geometry').flatMap((t) => [...cppComment(t.description, ''), `inline constexpr float k${pascal([t.path[1]])} = ${px(t)};`]),
     '}  // namespace geometry',
     '',
-    '// Motion: one curve and two durations.',
+    '// Motion: one curve, its durations, and distances in DIPs.',
     'namespace motion {',
     ...cppComment(ease.description, ''),
     `// cubic-bezier(${ease.value.join(', ')})`,
@@ -429,6 +429,10 @@ function buildCpp() {
     ...select('motion', 'duration').flatMap((t) => [
       ...cppComment(t.description, ''),
       `inline constexpr float k${pascal([t.path[2]])}Ms = ${cppFloat(parseInt(t.value, 10))};`,
+    ]),
+    ...select('motion').filter((t) => t.type === 'dimension').flatMap((t) => [
+      ...cppComment(t.description, ''),
+      `inline constexpr float k${pascal([t.path[1]])} = ${px(t)};`,
     ]),
     '}  // namespace motion',
     '',

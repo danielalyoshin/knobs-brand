@@ -126,5 +126,7 @@
   "geometry.dot": "9px",
   "motion.ease": [0.2, 0, 0, 1],
   "motion.duration.fast": "160ms",
-  "motion.duration.slow": "320ms"
+  "motion.duration.slow": "320ms",
+  "motion.duration.breath": "1600ms",
+  "motion.rise": "4px"
 }

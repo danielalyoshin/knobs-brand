@@ -10,7 +10,7 @@
 **Your OBS mic chain, in every app.**
 
 The brand of [knobs](https://github.com/danielalyoshin/knobs): its logo, colours, type, and the design tokens that carry them.<br>
-A git submodule of [knobs-site](https://github.com/danielalyoshin/knobs-site), so the page and the app can draw on the same files.
+A git submodule of [knobs-site](https://github.com/danielalyoshin/knobs-site) and [knobs](https://github.com/danielalyoshin/knobs), so the page and the app draw on the same files.
 
 [Brand guide](BRAND.md) · [Tokens](tokens/tokens.json) · [knobs](https://github.com/danielalyoshin/knobs) · [getknobs.app](https://getknobs.app/) · [Issues](https://github.com/danielalyoshin/knobs/issues)
 
@@ -20,7 +20,7 @@ A git submodule of [knobs-site](https://github.com/danielalyoshin/knobs-site), s
 
 ## Tokens
 
-Every value lives in [`tokens/tokens.json`](tokens/tokens.json). `node tokens/build.mjs` builds `dist/` from it: `tokens.css` for the site, `knobs_tokens.h` for the app and `tokens.flat.json` for anything else, and `--check` confirms `dist/` still matches. It needs Node 18 or newer and nothing else.
+Every value lives in [`tokens/tokens.json`](tokens/tokens.json). `node tokens/build.mjs` builds `dist/` from it: `tokens.css` for the site, `knobs_tokens.h` for the app, `tokens.flat.json` for anything else, and the app's state marks as SVGs in `status/`, and `--check` confirms `dist/` still matches. It needs Node 18 or newer and nothing else.
 
 ## License
 

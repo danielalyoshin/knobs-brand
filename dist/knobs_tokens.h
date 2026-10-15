@@ -197,8 +197,9 @@ inline constexpr Scheme kLight = {
 };
 
 // The app's state marks: the tray icon's badges, and the marks beside a note in
-// the setup window. The same in both schemes. They belong to the product alone:
-// never in brand material, and never a text colour, a border or a fill.
+// the setup window. The same in both schemes, apart from the info disc, which
+// turns over on a dark ground. They belong to the product alone: never in brand
+// material, and never a text colour, a border or a fill.
 namespace status {
 // Set: a disc with a white check.
 inline constexpr Argb kOk = 0xFF23875A;  // oklch(0.555 0.1146 159)
@@ -206,13 +207,47 @@ inline constexpr Argb kOk = 0xFF23875A;  // oklch(0.555 0.1146 159)
 inline constexpr Argb kStop = 0xFFE5484D;  // oklch(0.626 0.193 23)
 // A warning: a triangle with a dark exclamation mark.
 inline constexpr Argb kWarn = 0xFFF0A33C;  // oklch(0.774 0.1455 70)
-// Paused, or a note: a disc with white pause bars or a white i.
+// Paused, or a note, on a light ground: a disc with white pause bars or a white
+// i.
 inline constexpr Argb kInfo = 0xFF4A4C52;  // oklch(0.417 0.01 271)
+// Paused, or a note, on a dark ground: the info disc turned over, white, so it
+// stands out from the ground as the graphite disc doesn't.
+inline constexpr Argb kInfoOnDark = 0xFFFFFFFF;  // status.on-status
+// The pause bars or the i on the white info disc.
+inline constexpr Argb kOnInfoOnDark = 0xFF4A4C52;  // status.info
 // The glyph on the ok, stop and info discs.
 inline constexpr Argb kOnStatus = 0xFFFFFFFF;  // brand::kWhite
 // The glyph on the warning triangle.
 inline constexpr Argb kOnWarn = 0xFF17181B;  // oklch(0.21 0.006 271)
 }  // namespace status
+
+// The state marks' shapes, as SVG path data in a 16-unit box with absolute M,
+// L, H, V, A and Z only. Each mark is a ground in its status colour with a
+// glyph filled over it, never stroked, and cut like the logo: square ends,
+// level and plumb edges, true circles. A mark is drawn at the size it's shown
+// at, 16 units to its width.
+namespace status_shape {
+// The ground of the ok, stop and info marks and the pause badge: a true circle
+// filling the box.
+inline constexpr char kDisc[] = "M0 8A8 8 0 1 1 16 8A8 8 0 1 1 0 8Z";
+// The warning's ground: equilateral and 18 units across, past the box's sides,
+// so it weighs as much as a disc to the eye.
+inline constexpr char kTriangle[] = "M8 0.21L17 15.8H-1Z";
+// Set, on the ok disc: two arms 2 units wide at 45 degrees, meeting in a mitred
+// corner, their ends cut square to them. It sits a little below the centre,
+// where its weight balances.
+inline constexpr char kCheck[] = "M3.693 8.307L7 11.614L12.307 6.307L10.893 4.893L7 8.786L5.107 6.893Z";
+// Needs you, on the stop disc: a bar 2 units wide and 5.5 tall over a 2-unit
+// square, 1.5 apart.
+inline constexpr char kExclamation[] = "M7 3.5H9V9H7ZM7 10.5H9V12.5H7Z";
+// A note, on the info disc: the exclamation mark turned over.
+inline constexpr char kInformation[] = "M7 3.5H9V5.5H7ZM7 7H9V12.5H7Z";
+// Paused, on the info disc: two bars 2 units wide and 7 tall, 1.5 apart.
+inline constexpr char kPause[] = "M5.25 4.5H7.25V11.5H5.25ZM8.75 4.5H10.75V11.5H8.75Z";
+// A warning, on the triangle: the exclamation mark, 4.5 tall over its square,
+// set low where the triangle is wide.
+inline constexpr char kTriangleExclamation[] = "M7 5.8H9V10.3H7ZM7 11.8H9V13.8H7Z";
+}  // namespace status_shape
 
 // Geometry, in DIPs (CSS pixels).
 namespace geometry {

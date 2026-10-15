@@ -65,8 +65,9 @@ Drawn on a 100-unit square, centred at 50, 50.
 - The favicon is the mark alone, filling its square: one SVG holding both marks, the dark one on light browser tabs and the light one on dark tabs, switching with the system's light or dark setting. At favicon size the quarter-height clear space gives way; it's the one place it does.
 - `favicon.ico` (16, 32 and 48) and the favicon PNGs keep the tile, at 64 units (radius 14) with the mark at 52%, for browsers that can't switch an SVG favicon: one picture that reads on any tab.
 - The iPhone icon keeps its square tile, since iOS fills transparency with black.
-- The tray uses the one-colour white mark with no tile.
-- Still open for the app: Windows 11 shows app icons without a plate, but a plain `.exe` icon is one picture for both light and dark taskbars, where the dark mark disappears on dark and the light mark on light. Packaged apps can ship a light and a dark icon; a plain installer can't.
+- The Windows app's icon is the mark alone, with no tile. A plain `.exe` icon is one picture for light and dark taskbars alike, and the `.exe`'s, which Explorer, Start and the installer show, is the dark mark: the graphite dial with the red sweep, for the light grounds those mostly are. Where the app picks its icon itself, in its windows and its notifications, a dark ground gets the light mark, the white dial.
+- The tray uses the one-colour mark with no tile, as Windows' own tray icons are: white on a dark taskbar and black on a light one, switching when Windows' mode does.
+- At 16 and 20px the tray's mark is the knob alone, filling its square. There the gap and the sweep's start are under a pixel, and anti-aliasing smears them into grey. From 24px the sweep is back. The knob-alone files are the one-colour `knobs-knob-white.svg` and `knobs-knob-black.svg`, on the mark's 100-unit grid.
 
 ### Share card
 
@@ -74,7 +75,7 @@ Drawn on a 100-unit square, centred at 50, 50.
 
 ### Files
 
-- `logo/svg/`: `knobs-lockup-horizontal-*`, `knobs-lockup-stacked-*`, `knobs-mark-*` and `knobs-wordmark-*` in light, dark, white and black; `knobs-app-icon.svg` (the rounded tile) and `knobs-app-icon-square.svg`.
+- `logo/svg/`: `knobs-lockup-horizontal-*`, `knobs-lockup-stacked-*`, `knobs-mark-*` and `knobs-wordmark-*` in light, dark, white and black; `knobs-knob-white.svg` and `knobs-knob-black.svg`, the knob alone for the tray's smallest sizes; `knobs-app-icon.svg` (the rounded tile) and `knobs-app-icon-square.svg`.
 - `logo/png/`: horizontal lockups at 1200 and 2400 wide, stacked lockups at 1200, the mark at 1024, and the app icon at 256, 512 and 1024.
 - `web/`: `favicon.svg` (the mark alone, switching with light and dark), `favicon.ico`, `favicon-16.png`, `favicon-32.png` and `favicon-48.png` (on the tile); `apple-touch-icon.png` (180, square); `icon-192.png` and `icon-512.png` (the rounded tile, for a web app manifest); `card.png`, the share card.
 
@@ -207,14 +208,23 @@ Body text is at least 4.5:1 and large text and controls at least 3:1, in both sc
 
 ### State marks
 
-The app shows its state with the tray icon's badges, and with the same marks beside a note in its setup window. They are the same in both schemes and belong to the product alone: never in brand material, and never a text colour, a border or a fill.
+The app shows its state with the tray icon's badges, and with the same marks beside a note in its setup window. They are the same in both schemes, apart from the info disc, and belong to the product alone: never in brand material, and never a text colour, a border or a fill.
 
-| Mark | Value | Means |
-| --- | --- | --- |
-| Ok | `#23875a` | Set: a disc with a white check. |
-| Stop | `#e5484d` | Needs you: a disc with a white exclamation mark. |
-| Warn | `#f0a33c` | A warning: a triangle with a dark exclamation mark (`#17181b`). |
-| Info | `#4a4c52` | Paused, or a note: a disc with white pause bars or a white i. |
+| Mark | | Value | Means |
+| --- | --- | --- | --- |
+| Ok | <img src="dist/status/ok.svg" width="24" height="24" alt=""> | `#23875a` | Set: a disc with a white check. |
+| Stop | <img src="dist/status/stop.svg" width="24" height="24" alt=""> | `#e5484d` | Needs you: a disc with a white exclamation mark. |
+| Warn | <img src="dist/status/warn.svg" width="24" height="24" alt=""> | `#f0a33c` | A warning: a triangle with a dark exclamation mark (`#17181b`). |
+| Info | <img src="dist/status/info.svg" width="24" height="24" alt=""> <img src="dist/status/pause.svg" width="24" height="24" alt=""> | `#4a4c52` | A note, or paused: a disc with a white i or white pause bars. On a dark ground, such as the dark scheme or a dark taskbar, it turns over: a white disc with a graphite i or bars (`info-on-dark`), since the graphite disc barely shows there. |
+
+The marks are cut like the logo: square ends, level and plumb edges, true circles. Each is drawn in a 16-unit box, its glyph filled over its ground and never stroked, from the shapes in `tokens.json` (`status-shape`).
+
+- **Check:** two arms 2 units wide at 45°, meeting in a mitred corner, their ends cut square to them. It sits a little below the disc's centre, where its weight balances.
+- **Exclamation mark:** a bar 2 units wide and 5.5 tall over a 2-unit square, 1.5 apart. The i is the same mark turned over.
+- **Pause:** two bars 2 units wide and 7 tall, 1.5 apart.
+- **Triangle:** equilateral and 18 units across, wider than the box, so it weighs as much as a disc to the eye. Its exclamation mark is 4.5 tall over its square, set low where the triangle is wide.
+- **At tray size** a badge is drawn on whole pixels: the same bars and squares, each a whole number of pixels, so nothing blurs.
+- **Beside a stage icon** a mark is 7/16 of the icon, flush with its bottom-right corner, with a clear ring of the ground round it.
 
 ### What the palette avoids
 

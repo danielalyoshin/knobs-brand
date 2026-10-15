@@ -282,7 +282,8 @@ inline constexpr float kSlowMs = 320.0f;
 // A waiting mark's breath: it fades out and back once in this time, for as long
 // as something waits.
 inline constexpr float kBreathMs = 1600.0f;
-// How far arriving content rises as it fades in, over the fast duration.
+// How far arriving content moves into place as it fades in, over the fast
+// duration, rising from below or falling from above.
 inline constexpr float kRise = 4.0f;
 }  // namespace motion
 

@@ -294,7 +294,7 @@ Every face loads with `font-display: swap`.
 
 - **One curve:** `cubic-bezier(0.2, 0, 0, 1)`. Quick to start, then settling.
 - **Two durations:** 160ms for feedback (a hover, a copy confirming, a disclosure opening, a page arriving) and 320ms for structure (a state settling, a panel changing height, a marker moving to a new place).
-- **Arriving content rises 4px** as it fades in, over the feedback duration.
+- **Arriving content moves 4px into place** as it fades in, over the feedback duration. Both directions are allowed: it rises from below, as the app's pages do, or falls from above, as the site's disclosures do, opening down from the line that opened them.
 - **A waiting mark breathes** once every 1.6s, fading out and back for as long as something waits.
 - **Things settle; nothing performs.** No bounce, no overshoot, and nothing that moves for its own sake.
 - **Two movements keep their own timing.** A signal travelling through a drawing of the mic's path rides the same curve, timed by distance so it crosses at one pace at any size, once, in about three seconds. A walkthrough's camera eases gently in and out, so it never whips.

@@ -6,9 +6,9 @@
  * The dark scheme is the default, on :root. The light scheme follows the
  * system setting unless the root element has data-theme="dark", and
  * data-theme="light" picks it whatever the system says, so a toggle that
- * sets data-theme wins either way. A role both schemes share, such as the
- * footer band, is set once, on :root. The app's state marks (status in
- * tokens.json) belong to the app and aren't declared here.
+ * sets data-theme wins either way. A role both schemes share is set once,
+ * on :root. The app's state marks (status in tokens.json) belong to the
+ * app and aren't declared here.
  */
 
 :root {
@@ -105,12 +105,12 @@
   --link-hover:       #df695e; /* --action-text */
   --focus:            #df695e; /* --action */
   --selection:        #7a342e; /* oklch(0.42 0.10 27.3) */
-  --band:             #c55149; /* --brand-cap-red-deep */
-  --band-line:        #d97e75; /* oklch(0.69 0.115 26.7) */
-  --band-line-strong: #efbcb7; /* oklch(0.84 0.06 25) */
-  --on-band:          #ffffff; /* --brand-white */
-  --band-selection:   #7c2622; /* oklch(0.40 0.12 26.7) */
-  --band-focus:       #ffffff; /* --brand-white */
+  --band:             #df695e; /* --brand-cap-red */
+  --band-line:        #b54b42; /* oklch(0.55 0.14 27.3) */
+  --band-line-strong: #822c26; /* oklch(0.42 0.12 27.3) */
+  --on-band:          #191b1d; /* --brand-graphite */
+  --band-selection:   #efbcb7; /* oklch(0.84 0.06 25) */
+  --band-focus:       #191b1d; /* --brand-graphite */
   --chart-knobs:      #df695e; /* --brand-cap-red */
   --chart-obs:        #62666d; /* --neutral-dark-510 */
 }
@@ -119,52 +119,64 @@
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     color-scheme: light;
-    --ground:         #eef0f4; /* --neutral-light-955 */
-    --ground-deep:    #e3e6ec; /* --neutral-light-925 */
-    --raised:         #ffffff; /* --brand-white */
-    --raised-2:       #f4f6f8; /* --neutral-light-972 */
-    --sunken:         #e6eaef; /* --neutral-light-935 */
-    --screen:         #ffffff; /* --brand-white */
-    --line:           #d0d4dc; /* --neutral-light-870 */
-    --line-strong:    #b3b8c0; /* --neutral-light-780 */
-    --text:           #191b1d; /* --brand-graphite */
-    --text-2:         #494d55; /* --neutral-light-420 */
-    --text-3:         #5c6169; /* --neutral-light-490 */
-    --action:         #c55149; /* --brand-cap-red-deep */
-    --action-hover:   #b2403a; /* oklch(0.53 0.15 26.7) */
-    --action-text:    #ab3a34; /* oklch(0.51 0.15 26.7) */
-    --on-action:      #ffffff; /* --brand-white */
-    --link-underline: #c55149; /* --action */
-    --link-hover:     #ab3a34; /* --action-text */
-    --focus:          #c55149; /* --action */
-    --selection:      #f7ccc6; /* oklch(0.88 0.05 26.7) */
-    --chart-knobs:    #c55149; /* --brand-cap-red-deep */
-    --chart-obs:      #787f8b; /* --neutral-light-595 */
+    --ground:           #eef0f4; /* --neutral-light-955 */
+    --ground-deep:      #e3e6ec; /* --neutral-light-925 */
+    --raised:           #ffffff; /* --brand-white */
+    --raised-2:         #f4f6f8; /* --neutral-light-972 */
+    --sunken:           #e6eaef; /* --neutral-light-935 */
+    --screen:           #ffffff; /* --brand-white */
+    --line:             #d0d4dc; /* --neutral-light-870 */
+    --line-strong:      #b3b8c0; /* --neutral-light-780 */
+    --text:             #191b1d; /* --brand-graphite */
+    --text-2:           #494d55; /* --neutral-light-420 */
+    --text-3:           #5c6169; /* --neutral-light-490 */
+    --action:           #c55149; /* --brand-cap-red-deep */
+    --action-hover:     #b2403a; /* oklch(0.53 0.15 26.7) */
+    --action-text:      #ab3a34; /* oklch(0.51 0.15 26.7) */
+    --on-action:        #ffffff; /* --brand-white */
+    --link-underline:   #c55149; /* --action */
+    --link-hover:       #ab3a34; /* --action-text */
+    --focus:            #c55149; /* --action */
+    --selection:        #f7ccc6; /* oklch(0.88 0.05 26.7) */
+    --band:             #c55149; /* --brand-cap-red-deep */
+    --band-line:        #d97e75; /* oklch(0.69 0.115 26.7) */
+    --band-line-strong: #efbcb7; /* oklch(0.84 0.06 25) */
+    --on-band:          #ffffff; /* --brand-white */
+    --band-selection:   #7c2622; /* oklch(0.40 0.12 26.7) */
+    --band-focus:       #ffffff; /* --brand-white */
+    --chart-knobs:      #c55149; /* --brand-cap-red-deep */
+    --chart-obs:        #787f8b; /* --neutral-light-595 */
   }
 }
 
 /* Colour by role: light, chosen on the page */
 :root[data-theme="light"] {
   color-scheme: light;
-  --ground:         #eef0f4; /* --neutral-light-955 */
-  --ground-deep:    #e3e6ec; /* --neutral-light-925 */
-  --raised:         #ffffff; /* --brand-white */
-  --raised-2:       #f4f6f8; /* --neutral-light-972 */
-  --sunken:         #e6eaef; /* --neutral-light-935 */
-  --screen:         #ffffff; /* --brand-white */
-  --line:           #d0d4dc; /* --neutral-light-870 */
-  --line-strong:    #b3b8c0; /* --neutral-light-780 */
-  --text:           #191b1d; /* --brand-graphite */
-  --text-2:         #494d55; /* --neutral-light-420 */
-  --text-3:         #5c6169; /* --neutral-light-490 */
-  --action:         #c55149; /* --brand-cap-red-deep */
-  --action-hover:   #b2403a; /* oklch(0.53 0.15 26.7) */
-  --action-text:    #ab3a34; /* oklch(0.51 0.15 26.7) */
-  --on-action:      #ffffff; /* --brand-white */
-  --link-underline: #c55149; /* --action */
-  --link-hover:     #ab3a34; /* --action-text */
-  --focus:          #c55149; /* --action */
-  --selection:      #f7ccc6; /* oklch(0.88 0.05 26.7) */
-  --chart-knobs:    #c55149; /* --brand-cap-red-deep */
-  --chart-obs:      #787f8b; /* --neutral-light-595 */
+  --ground:           #eef0f4; /* --neutral-light-955 */
+  --ground-deep:      #e3e6ec; /* --neutral-light-925 */
+  --raised:           #ffffff; /* --brand-white */
+  --raised-2:         #f4f6f8; /* --neutral-light-972 */
+  --sunken:           #e6eaef; /* --neutral-light-935 */
+  --screen:           #ffffff; /* --brand-white */
+  --line:             #d0d4dc; /* --neutral-light-870 */
+  --line-strong:      #b3b8c0; /* --neutral-light-780 */
+  --text:             #191b1d; /* --brand-graphite */
+  --text-2:           #494d55; /* --neutral-light-420 */
+  --text-3:           #5c6169; /* --neutral-light-490 */
+  --action:           #c55149; /* --brand-cap-red-deep */
+  --action-hover:     #b2403a; /* oklch(0.53 0.15 26.7) */
+  --action-text:      #ab3a34; /* oklch(0.51 0.15 26.7) */
+  --on-action:        #ffffff; /* --brand-white */
+  --link-underline:   #c55149; /* --action */
+  --link-hover:       #ab3a34; /* --action-text */
+  --focus:            #c55149; /* --action */
+  --selection:        #f7ccc6; /* oklch(0.88 0.05 26.7) */
+  --band:             #c55149; /* --brand-cap-red-deep */
+  --band-line:        #d97e75; /* oklch(0.69 0.115 26.7) */
+  --band-line-strong: #efbcb7; /* oklch(0.84 0.06 25) */
+  --on-band:          #ffffff; /* --brand-white */
+  --band-selection:   #7c2622; /* oklch(0.40 0.12 26.7) */
+  --band-focus:       #ffffff; /* --brand-white */
+  --chart-knobs:      #c55149; /* --brand-cap-red-deep */
+  --chart-obs:        #787f8b; /* --neutral-light-595 */
 }

@@ -84,7 +84,7 @@ Every SVG is outlined and needs no fonts. The files carry no metadata: the SVGs 
 
 ## Colour
 
-Graphite leads, and red means knobs. A near-neutral graphite carries the brand in two schemes: graphite grounds in the dark scheme, a cool pale grey desk with white panels in the light one. One red, cap red, marks everything that is knobs and everything that can be pressed. Cap red deep, the red of the light scheme's buttons, is also the band getknobs.app ends on, in both schemes.
+Graphite leads, and red means knobs. A near-neutral graphite carries the brand in two schemes: graphite grounds in the dark scheme, a cool pale grey desk with white panels in the light one. One red, cap red, marks everything that is knobs and everything that can be pressed. getknobs.app ends on a band of its buttons' red: cap red in the dark scheme, cap red deep in the light one.
 
 The palette is derived in OKLCH. Every neutral sits on graphite's hue (260), and every red on cap red's (21 to 27).
 
@@ -94,10 +94,10 @@ The palette is derived in OKLCH. Every neutral sits on graphite's hue (260), and
 | --- | --- | --- | --- |
 | Graphite | `#191b1d` | 0.22 0.006 260 | The brand ground: the dark scheme's page, the app icon's tile, the share card. The logo's ink on light grounds, and text in the light scheme. |
 | Ink | `#e5ecf6` | 0.94 0.016 260 | The logo's ink on dark grounds, and text in the dark scheme. |
-| Cap red | `#df695e` | 0.66 0.15 27.3 | The colour of knobs on dark grounds: the sweep and "obs", and the action colour. |
-| Cap red deep | `#c55149` | 0.585 0.15 26.7 | Cap red on white and light grounds, and the footer band in both schemes. |
+| Cap red | `#df695e` | 0.66 0.15 27.3 | The colour of knobs on dark grounds: the sweep and "obs", the action colour, and the footer band in the dark scheme. |
+| Cap red deep | `#c55149` | 0.585 0.15 26.7 | Cap red on white and light grounds, and the footer band in the light scheme. |
 | White | `#ffffff` | 1 0 0 | Panels in the light scheme, words on red, and the one-colour logo. |
-| Black | `#000000` | 0 0 0 | The one-colour logo on light colours and photos. |
+| Black | `#000000` | 0 0 0 | The one-colour logo on light colours and photos, and on the dark scheme's footer band. |
 
 ### Where red goes
 
@@ -114,9 +114,9 @@ Words on cap red are graphite, never ink: cap red on ink is 2.8:1. Words on cap 
 
 ### The footer band
 
-The page ends on a band of cap red deep, the same in both schemes: the page's one large field of red, and a red it already uses for the light scheme's buttons.
+The page ends on a band of its buttons' red: cap red in the dark scheme, cap red deep in the light one. It is the page's one large field of red, and the same red as the buttons above it.
 
-- **On the band:** the white one-colour lockup, never the colour logo. Every word, link and underline is white, 4.5:1 with no margin, so small words (the legal lines) take weight 500. A link's underline thickens under the pointer. Hairlines and control edges are lighter shades of the band's red; selected text sits on a deeper one, and the focus ring is white.
+- **On the band:** the one-colour lockup, never the colour logo: black on cap red, white on cap red deep. Every word, link and underline takes the colour of a red button's words: graphite on cap red (5.2:1), and white on cap red deep (4.5:1 with no margin), so small words (the legal lines) take weight 500. A link's underline thickens under the pointer. Hairlines and control edges are shades of the band's red, deeper in the dark scheme and lighter in the light one; selected text sits on a lighter red under graphite in dark and a deeper one under white in light. The focus ring takes the words' colour.
 - **One field.** The band is the footer and nothing else. Red elsewhere stays edges, fills of controls, dots and bars.
 
 ### The dark scheme
@@ -144,12 +144,12 @@ Graphite grounds, ink text, and cap red for what is knobs and what can be presse
 | `link-hover` | `#df695e` | A link's words under the pointer. | |
 | `focus` | `#df695e` | The focus ring. | 4.8 or more on every ground |
 | `selection` | `#7a342e` | Selected text's ground, under ink. | ink on it 7.5 |
-| `band` | `#c55149` | Cap red deep: the footer band, the same in both schemes. | |
-| `band-line` | `#d97e75` | Hairlines on the band. | 1.55 against the band |
-| `band-line-strong` | `#efbcb7` | Control edges and titled rules on the band. | 2.7 against the band |
-| `on-band` | `#ffffff` | Every word, link and underline on the band, and the white lockup. | 4.52 |
-| `band-selection` | `#7c2622` | Selected text's ground on the band, under white. | white on it 9.7 |
-| `band-focus` | `#ffffff` | The focus ring on the band. | 4.52 |
+| `band` | `#df695e` | Cap red: the footer band, in the red of the buttons. | |
+| `band-line` | `#b54b42` | Hairlines on the band. | 1.56 against the band |
+| `band-line-strong` | `#822c26` | Control edges and titled rules on the band. | 2.7 against the band |
+| `on-band` | `#191b1d` | Every word, link and underline on the band, in graphite; the black lockup. | 5.2 |
+| `band-selection` | `#efbcb7` | Selected text's ground on the band, under graphite. | graphite on it 10.3 |
+| `band-focus` | `#191b1d` | The focus ring on the band. | 5.2 |
 | `chart-knobs` | `#df695e` | knobs's bars, lit. | 5.8 on ground-deep |
 | `chart-obs` | `#62666d` | OBS's bars, unlit. | 3.4 on ground-deep; 1.7 from knobs's red |
 
@@ -178,11 +178,16 @@ Composed for daylight, not inverted. A cool pale grey desk, on graphite's hue an
 | `link-hover` | `#ab3a34` | A link's words under the pointer. | |
 | `focus` | `#c55149` | The focus ring. | 3.6 or more on every ground |
 | `selection` | `#f7ccc6` | Selected text's ground, under graphite. | graphite on it 11.9 |
-| `band` and the other band roles | as in the dark scheme | The footer band is the same in both schemes. | |
+| `band` | `#c55149` | Cap red deep: the footer band, in the red of the buttons. | |
+| `band-line` | `#d97e75` | Hairlines on the band. | 1.55 against the band |
+| `band-line-strong` | `#efbcb7` | Control edges and titled rules on the band. | 2.7 against the band |
+| `on-band` | `#ffffff` | Every word, link and underline on the band, in white; the white lockup. | 4.52 |
+| `band-selection` | `#7c2622` | Selected text's ground on the band, under white. | white on it 9.7 |
+| `band-focus` | `#ffffff` | The focus ring on the band. | 4.52 |
 | `chart-knobs` | `#c55149` | knobs's bars, lit. | 3.6 on ground-deep |
 | `chart-obs` | `#787f8b` | OBS's bars, unlit. | 3.2 on ground-deep; 1.1 from knobs's red |
 
-In CSS each role is a custom property of the same name (`--ground`), and a role both schemes share, such as the band, is set once; in C++ it is a member of `knobs::tokens::kDark` and `kLight` (`kDark.ground`).
+In CSS each role is a custom property of the same name (`--ground`), and a role both schemes share is set once; in C++ it is a member of `knobs::tokens::kDark` and `kLight` (`kDark.ground`).
 
 `raised-2` and the geometry token `hairline` aren't used on getknobs.app yet; they stay in the set for the app's hover and pressed tones and its line width.
 
@@ -201,9 +206,9 @@ Body text is at least 4.5:1 and large text and controls at least 3:1, in both sc
 | Cap red on graphite | 5.2:1 | The logo, buttons, red words |
 | Cap red on the deep band `#0c0e10` | 5.8:1 | Buttons and edges on the darker bands |
 | Cap red on a panel `#202225` | 4.8:1 | Edges and red words on a panel |
-| Graphite on cap red | 5.2:1 | Words on a red button in the dark scheme |
+| Graphite on cap red | 5.2:1 | Words on a red button in the dark scheme, and every word on its footer band |
 | Cap red deep on white | 4.52:1 | The logo and buttons in the light scheme |
-| White on cap red deep | 4.52:1 | Words on a red button in the light scheme, and every word on the footer band; small words at 500 |
+| White on cap red deep | 4.52:1 | Words on a red button in the light scheme, and every word on its footer band; small words at 500 |
 | `#ab3a34` on the light grounds | 5.0:1 or more | Red words in the light scheme |
 | Cap red on ink | 2.8:1 | Never |
 

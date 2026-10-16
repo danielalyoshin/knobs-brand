@@ -243,8 +243,8 @@ function cssBlock(list, indent) {
 
 function buildCss() {
   const pad = '  ';
-  // A role the two schemes share, such as the footer band, is set once on
-  // :root; the light blocks name only the roles that change.
+  // A role the two schemes share is set once on :root; the light blocks name
+  // only the roles that change.
   const darkValue = new Map(select('scheme', 'dark').map((t) => [t.path[2], t.value]));
   const lightOwn = select('scheme', 'light').filter((t) => t.value !== darkValue.get(t.path[2]));
   const out = [
@@ -256,9 +256,9 @@ function buildCss() {
     ' * The dark scheme is the default, on :root. The light scheme follows the',
     ' * system setting unless the root element has data-theme="dark", and',
     ' * data-theme="light" picks it whatever the system says, so a toggle that',
-    ' * sets data-theme wins either way. A role both schemes share, such as the',
-    ' * footer band, is set once, on :root. The app\'s state marks (status in',
-    ' * tokens.json) belong to the app and aren\'t declared here.',
+    ' * sets data-theme wins either way. A role both schemes share is set once,',
+    ' * on :root. The app\'s state marks (status in tokens.json) belong to the',
+    ' * app and aren\'t declared here.',
     ' */',
     '',
     ':root {',

@@ -110,18 +110,17 @@ struct Scheme {
   Argb focus;
   // Selected text's ground: a wash of cap red, under ink.
   Argb selection;
-  // The footer band, cap red deep in both schemes: the page's one large field
-  // of red, and a red the page already uses.
+  // The footer band in cap red, the red of the dark scheme's buttons: the
+  // page's one large field of red.
   Argb band;
-  // Hairlines on the band.
+  // Hairlines on the band: a deeper red.
   Argb band_line;
   // Control edges and titled rules on the band.
   Argb band_line_strong;
-  // Every word, link and underline on the band, and the white one-colour
-  // lockup. White on cap red deep is 4.5:1 with no margin, so small words take
-  // weight 500.
+  // Every word, link and underline on the band, and the black one-colour
+  // lockup: graphite, as on a red button.
   Argb on_band;
-  // Selected text's ground on the band: a deeper red, under white.
+  // Selected text's ground on the band: a lighter red, under graphite.
   Argb band_selection;
   // The focus ring on the band.
   Argb band_focus;
@@ -154,12 +153,12 @@ inline constexpr Scheme kDark = {
     .link_hover = 0xFFDF695E,        // same as action_text
     .focus = 0xFFDF695E,             // same as action
     .selection = 0xFF7A342E,         // oklch(0.42 0.10 27.3)
-    .band = 0xFFC55149,              // brand::kCapRedDeep
-    .band_line = 0xFFD97E75,         // oklch(0.69 0.115 26.7)
-    .band_line_strong = 0xFFEFBCB7,  // oklch(0.84 0.06 25)
-    .on_band = 0xFFFFFFFF,           // brand::kWhite
-    .band_selection = 0xFF7C2622,    // oklch(0.40 0.12 26.7)
-    .band_focus = 0xFFFFFFFF,        // brand::kWhite
+    .band = 0xFFDF695E,              // brand::kCapRed
+    .band_line = 0xFFB54B42,         // oklch(0.55 0.14 27.3)
+    .band_line_strong = 0xFF822C26,  // oklch(0.42 0.12 27.3)
+    .on_band = 0xFF191B1D,           // brand::kGraphite
+    .band_selection = 0xFFEFBCB7,    // oklch(0.84 0.06 25)
+    .band_focus = 0xFF191B1D,        // brand::kGraphite
     .chart_knobs = 0xFFDF695E,       // brand::kCapRed
     .chart_obs = 0xFF62666D,         // neutral::kDark510
 };
@@ -186,12 +185,12 @@ inline constexpr Scheme kLight = {
     .link_hover = 0xFFAB3A34,        // same as action_text
     .focus = 0xFFC55149,             // same as action
     .selection = 0xFFF7CCC6,         // oklch(0.88 0.05 26.7)
-    .band = 0xFFC55149,              // same as band
-    .band_line = 0xFFD97E75,         // same as band_line
-    .band_line_strong = 0xFFEFBCB7,  // same as band_line_strong
-    .on_band = 0xFFFFFFFF,           // same as on_band
-    .band_selection = 0xFF7C2622,    // same as band_selection
-    .band_focus = 0xFFFFFFFF,        // same as band_focus
+    .band = 0xFFC55149,              // brand::kCapRedDeep
+    .band_line = 0xFFD97E75,         // oklch(0.69 0.115 26.7)
+    .band_line_strong = 0xFFEFBCB7,  // oklch(0.84 0.06 25)
+    .on_band = 0xFFFFFFFF,           // brand::kWhite
+    .band_selection = 0xFF7C2622,    // oklch(0.40 0.12 26.7)
+    .band_focus = 0xFFFFFFFF,        // brand::kWhite
     .chart_knobs = 0xFFC55149,       // brand::kCapRedDeep
     .chart_obs = 0xFF787F8B,         // neutral::kLight595
 };

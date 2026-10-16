@@ -302,6 +302,46 @@ Every face loads with `font-display: swap`.
 - **Loops can be paused.** A video or an animation that plays by itself for more than five seconds has a visible pause control. The one loop without one is a waiting mark, such as the app's dot that breathes slowly while it waits.
 - **Reduced motion.** When the system asks for less motion (the reduced-motion setting, or Windows' animations turned off), nothing animates. States change at once.
 
+## Video
+
+A video follows the rest of this guide, apart from what this section changes. Each rule names the rule it relaxes. A video's timing, layout and checks live with the video, and so does anything that holds for that video alone. Its colours, type and geometry still come from `tokens.json`, so only its timing relaxes "every value below is in `tokens/tokens.json`" at the top of this guide.
+
+### The world
+
+- **Physical things are 3D and lit.** A video may build its physical things solid and lit: a mic, a cable, a chart's bars, the floor. They stand in one space, with perspective, parallax and fog. The faces turned to the camera keep their token. Shading stays within each token's tones, and never takes a face down to the tone behind it. Soft contact shadows may sit on the floor, stepping toward `ground-deep`, never to black. Edges take a 45° bevel, and a made thing may have filleted edges, as a manufactured one would. Software stays as this guide draws it: flat, unlit and without shadows. This relaxes Geometry › Flat, and the shadows and gradients in Colour › What the palette avoids.
+- **Hairlines and shapes foreshorten in perspective.** Corners, circles, 45° angles and hairlines foreshorten with the camera. A line in a 3D scene keeps a rule's weight on the frame at any depth (Type › Rules in frame pixels, below), and is never scaled by the camera. It leaves whole pixels while it moves; a line at rest on a plane facing the camera stays on whole pixels. Shapes may pass through rounded forms while they morph, and are true at rest. This relaxes Geometry › Square corners, True circles, Angles are 45° and Hairlines.
+- **A pool of light.** A pool of light may lift the ground behind a subject, never past `raised`. It falls back to exact graphite at the frame's edges. Nothing goes darker than graphite: no vignette. This relaxes the gradients in Colour › What the palette avoids.
+- **Motion blur and depth.** Fast moves are motion blurred, at a 180° shutter. Background layers may soften with depth. Nothing at rest is blurred, and type and the logo never soften with depth. This relaxes the glass in Colour › What the palette avoids: blur, but only in motion and in depth.
+
+### Motion
+
+- **The signal may perform.** The signal may bounce, squash, overshoot and settle in a damped wobble. A line it lands on may take the hit and ripple, and shapes may arrive on a spring. Measured values, counters, lines of type and the logo at rest never overshoot. This relaxes Motion › Things settle; nothing performs.
+- **The signal's dot deforms in motion.** It stretches along its path, squashes as it lands, pours into what it lands in and changes size. At rest it is a true circle. It may travel the whole path over a whole video, at a changing pace. This relaxes Geometry › True circles and The cap dot, and the signal's one pace in Motion › Two movements keep their own timing.
+- **Timing follows a musical beat grid.** Moves start and land on the beat and its fractions. The video's hits are written out for a music editor. The curve above stays for settles. This relaxes Motion › One curve and Two durations.
+- **The camera may fly, whip and push.** A video is one space, and its scenes are places in it. The camera flies between them, may whip pan, and pushes in. Holds keep moving, so no frame reads as a stall. This relaxes the walkthrough's camera in Motion › Two movements keep their own timing, and "nothing that moves for its own sake" in Things settle; nothing performs.
+
+### Type
+
+- **Kinetic type.** A line's characters rise into place through a hard mask. They never fade. A line leaves with the camera's next move. Literal text, such as an address, types on. This relaxes Motion › Arriving content moves 4px into place.
+- **Sizes in frame pixels.** Type is sized in pixels of the frame, not in rem. Anything read is at least 40px on a 1080-high frame; footnotes are about 17px, read at full size. Display type may fill the frame, one display line at a time, and a headline may be set across a chart in several runs. This relaxes Type › The scale, and "the one headline" in Type › Faces.
+- **Rules in frame pixels.** Rules and lines drawn in a video's world, such as a chart's floor line or a footnote's rule, scale with the frame, like type, so they read at the size a video is played: a hairline is 2px on a 1080 frame (4px at 2160), about 1px on a typical player, in this guide's tones for rules. This doesn't cover the edges and rules inside software: software in a video is drawn as this guide draws it, its edges and rules 1px hairlines in its own units, scaling with it, and it stands out by its tone against the ground. This relaxes Geometry › Hairlines.
+
+### Colour
+
+- **Dark only.** Videos use the dark scheme alone. No light scheme, cap red deep, footer band or one-colour logo, and so no scheme switch. This relaxes Colour › The light scheme and The footer band, and Motion › A scheme switch lands in one frame.
+- **Red from the mic onward.** In a video that tells the mic's path, red may be the signal from the mic onward: the voice knobs will carry. This relaxes "what is knobs" in Colour › Where red goes.
+- **The encode.** Standard web encodes at 4:2:0, such as H.264 and AV1, are accepted, with their faint fringe at red edges. This relaxes "every red on cap red's hue" in Colour.
+
+### The logo
+
+- **The end card.** A video ends on the share card's layout: graphite, with the light horizontal lockup centred. It adds the address and the independence line, laid out in the lockup's space, so a camera move carries them with it and nothing enters its clear space. This relaxes Logo › Share card.
+- **The reveal.** The mark may be built from its geometry and its knob turned up to 1:30 as a reveal, from 7:30 and never past 1:30. It ends on the file at rest, and the wordmark stays the file throughout. A camera move may carry the logo and the end card's words with it, scaled evenly together, and past the frame's edge once they have been seen at rest. This relaxes Logo › Always use the files, Logo › Don't (rotate it, or turn the knob) and the edge of the screen in Logo › Clear space and minimum size.
+
+### On the page
+
+- **The player.** The page that plays a video gives it a pause control, and shows its poster as the still when the system asks for less motion. Its controls sit beside it, never over it, so its picture stays whole. A brand film sits on the page's graphite with no frame; on a light page it stands as a graphite panel of its own, with no edge line. `screen` stays the frame for walkthroughs and screenshots. This relaxes Motion › Loops can be paused and Reduced motion, which move from the video to its page, and `screen` in Colour › The dark scheme and The light scheme.
+- **Opened large.** A video opened large over its page dims the page under graphite at 80%, in both schemes, as a room's lights go down, and its controls there take the dark scheme. This relaxes Colour › The light scheme, while the video is open.
+
 ## Iconography
 
 - **Drawn, not filled.** 1.5px strokes with butt caps and miter joins, cut straight like the mark. Round only where the thing is round: a mic's capsule, a fader's knob.

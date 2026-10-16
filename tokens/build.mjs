@@ -459,6 +459,7 @@ const MARKS = [
   ['ok', 'Set', 'disc', 'status.ok', 'check', 'status.on-status'],
   ['stop', 'Needs you', 'disc', 'status.stop', 'exclamation', 'status.on-status'],
   ['warn', 'Warning', 'triangle', 'status.warn', 'triangle-exclamation', 'status.on-warn'],
+  ['warn-on-dark', 'Warning', 'triangle', 'status.warn-on-dark', 'triangle-exclamation', 'status.on-warn'],
   ['info', 'Information', 'disc', 'status.info', 'information', 'status.on-status'],
   ['pause', 'Paused', 'disc', 'status.info', 'pause', 'status.on-status'],
   ['info-on-dark', 'Information', 'disc', 'status.info-on-dark', 'information', 'status.on-info-on-dark'],

@@ -197,16 +197,21 @@ inline constexpr Scheme kLight = {
 };
 
 // The app's state marks: the tray icon's badges, and the marks beside a note in
-// the setup window. The same in both schemes, apart from the info disc, which
-// turns over on a dark ground. They belong to the product alone: never in brand
-// material, and never a text colour, a border or a fill.
+// the setup window. The same in both schemes, apart from the warning triangle,
+// whose amber deepens on a light ground, and the info disc, which turns over on
+// a dark ground. They belong to the product alone: never in brand material, and
+// never a text colour, a border or a fill.
 namespace status {
 // Set: a disc with a white check.
 inline constexpr Argb kOk = 0xFF23875A;  // oklch(0.555 0.1146 159)
 // Needs you: a disc with a white exclamation mark.
 inline constexpr Argb kStop = 0xFFE5484D;  // oklch(0.626 0.193 23)
-// A warning: a triangle with a dark exclamation mark.
-inline constexpr Argb kWarn = 0xFFF0A33C;  // oklch(0.774 0.1455 70)
+// A warning, on a light ground: a triangle with a dark exclamation mark, in an
+// amber deep enough to hold 3:1 against the light scheme's grounds and a light
+// taskbar, as the bright one doesn't.
+inline constexpr Argb kWarn = 0xFFB47308;  // oklch(0.61 0.13 70)
+// A warning, on a dark ground: the bright amber, as cap red is to cap red deep.
+inline constexpr Argb kWarnOnDark = 0xFFF0A33C;  // oklch(0.774 0.1455 70)
 // Paused, or a note, on a light ground: a disc with white pause bars or a white
 // i.
 inline constexpr Argb kInfo = 0xFF4A4C52;  // oklch(0.417 0.01 271)

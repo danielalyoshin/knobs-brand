@@ -205,17 +205,19 @@ Body text is at least 4.5:1 and large text and controls at least 3:1, in both sc
 | Cap red deep on white | 4.52:1 | The logo and buttons in the light scheme |
 | White on cap red deep | 4.52:1 | Words on a red button in the light scheme, and every word on the footer band; small words at 500 |
 | `#ab3a34` on the light grounds | 5.0:1 or more | Red words in the light scheme |
+| Amber `#b47308` on the light grounds | 3.1:1 or more | The warning triangle in the light scheme and on a light taskbar |
+| Amber `#f0a33c` on the dark grounds | 7.0:1 or more | The warning triangle in the dark scheme and on a dark taskbar |
 | Cap red on ink | 2.8:1 | Never |
 
 ### State marks
 
-The app shows its state with the tray icon's badges, and with the same marks beside a note in its setup window. They are the same in both schemes, apart from the info disc, and belong to the product alone: never in brand material, and never a text colour, a border or a fill.
+The app shows its state with the tray icon's badges, and with the same marks beside a note in its setup window. They are the same in both schemes, apart from the warning triangle and the info disc, and belong to the product alone: never in brand material, and never a text colour, a border or a fill.
 
 | Mark | | Value | Means |
 | --- | --- | --- | --- |
 | Ok | <img src="dist/status/ok.svg" width="24" height="24" alt=""> | `#23875a` | Set: a disc with a white check. |
 | Stop | <img src="dist/status/stop.svg" width="24" height="24" alt=""> | `#e5484d` | Needs you: a disc with a white exclamation mark. |
-| Warn | <img src="dist/status/warn.svg" width="24" height="24" alt=""> | `#f0a33c` | A warning: a triangle with a dark exclamation mark (`#17181b`). |
+| Warn | <img src="dist/status/warn.svg" width="24" height="24" alt=""> <img src="dist/status/warn-on-dark.svg" width="24" height="24" alt=""> | `#b47308` | A warning: a triangle with a dark exclamation mark (`#17181b`). The bright amber, `#f0a33c`, is under 3:1 on a light ground, so a light ground gets this deep amber, and a dark ground, such as the dark scheme or a dark taskbar, the bright one (`warn-on-dark`), as cap red deep and cap red pair. |
 | Info | <img src="dist/status/info.svg" width="24" height="24" alt=""> <img src="dist/status/pause.svg" width="24" height="24" alt=""> | `#4a4c52` | A note, or paused: a disc with a white i or white pause bars. On a dark ground, such as the dark scheme or a dark taskbar, it turns over: a white disc with a graphite i or bars (`info-on-dark`), since the graphite disc barely shows there. |
 
 The marks are cut like the logo: square ends, level and plumb edges, true circles. Each is drawn in a 16-unit box, its glyph filled over its ground and never stroked, from the shapes in `tokens.json` (`status-shape`).

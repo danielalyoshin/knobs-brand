@@ -305,7 +305,7 @@ Every face loads with `font-display: swap`.
 ## Iconography
 
 - **Drawn, not filled.** 1.5px strokes with butt caps and miter joins, cut straight like the mark. Round only where the thing is round: a mic's capsule, a fader's knob.
-- **Two grids.** Interface icons (download, external link, copy, check, chevron, play, pause, replay, information, sun and moon) are drawn in a 16-unit square and sit at 16px beside text, growing with it. The four stages of the mic's path (the mic, the filters, the cable, your other apps) are drawn in a 20-unit square, in an odd box (21px), so the 1px wire runs through their centre.
+- **Two grids.** Interface icons (download, external link, copy, check, chevron, play, pause, replay, sound on and off, expand and minimize, information, sun and moon) are drawn in a 16-unit square and sit at 16px beside text, growing with it. The four stages of the mic's path (the mic, the filters, the cable, your other apps) are drawn in a 20-unit square, in an odd box (21px), so the 1px wire runs through their centre.
 - **Colour.** An icon takes the colour of the text it sits with. Idle icons and wires are `text-3`; knobs's own are cap red.
 - **Icons say where a control goes.** The GitHub mark for a page on GitHub, the download arrow for a file, an arrow after a link that leaves the site, and a chevron for something that opens in place, turning down while it's open.
 - **Other projects' marks** are used as their owners require: never recoloured, redrawn or turned red.
